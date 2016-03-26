@@ -14,8 +14,8 @@ LOGOUT_URL = 'http://cater.haidilao.com/Cater/wap/loginout.action'
 
 PERSON_CENTER_URL = 'http://cater.haidilao.com/Cater/wap/personCenter.action'
 
-CHECK_URL = 'http://cater.haidilao.com:60/hdl-applet/views/template/web/signManage_sign.xhtml'
-CHECK_ACTION = 'http://cater.haidilao.com:60/hdl-applet/rs/external/pointExtRest/addSignInfo'
+CHECK_URL = 'http://cater.haidilao.com/hdl-applet/views/template/web/signManage_sign.xhtml'
+CHECK_ACTION = 'http://cater.haidilao.com/hdl-applet/rs/external/pointExtRest/addSignInfo'
 
 YAML_CONF = 'config.yaml'
 
@@ -82,9 +82,9 @@ class HttpCheck(object):
         r = self.session.post(CHECK_URL, data=sign_params)
 
         headers = {'content-type': 'application/json',
-                   'Host': 'cater.haidilao.com:60',
-                   'Origin': 'http://cater.haidilao.com:60',
-                   'Referer': 'http://cater.haidilao.com:60/hdl-applet/views/template/web/signManage_sign.xhtml',
+                   'Host': 'cater.haidilao.com',
+                   'Origin': 'http://cater.haidilao.com',
+                   'Referer': 'http://cater.haidilao.com/hdl-applet/views/template/web/signManage_sign.xhtml',
                    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36',
                    'X-Requested-With': 'XMLHttpRequest'}
         check_params = {'userId': self.userid, 'userPhone': self.user}
